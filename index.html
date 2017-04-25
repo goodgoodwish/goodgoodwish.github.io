@@ -1,28 +1,42 @@
 <!doctype html>
 <html lang="en">
 
-<head>
-  <title>Charlie profile</title> 
-  <meta charset="utf-8"> 
-  <script src="manager.js"></script> 
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-
-</head>
-
-<body>
-
 <style>
+
 .nav-pills {
   font-family: Lobster;
   font-size: 2em;
 }
+#twitterIcon {
+  color:rgb(0,172,237);
+}
 .pageOne {
   background:url("https://images.unsplash.com/photo-1488867605300-0380106bc701");
   background-size: cover;
-  height: 800px;
-  margin-top: -10%;
+  padding-bottom: 5%;
+}
+.pageTwo {
+  background:url("https://lh3.googleusercontent.com/KNWQopLT-aIy5oyCqcp4jM2m9ZmcY6vm8eTnEJ_WdM_5nFejFgegvYske3My34sBBdSh6tnOFPg2Jc2hI0GUWGFmpkOgr7IREyO4o3Qu_rC7x4YI9VN0S3zZP0QTtvQlFU08YA=w710-h578-no");
+  background-size: cover;
+  height: 400px;
+  margin-top : 5%;
+  padding-top : 5%;
+  padding-bottom: 5%;
+}
+.pageThree {
+  
+}
+.pageFour {
+
+}
+
+.paddingTop {
+  padding-top : 5%;
+  padding-bottom: 5%;
+  margin: auto;  
+  border-color: green;
+  border-width: 3px;
+  border-style: solid;
 }
 .block {
   background-color:black;
@@ -32,63 +46,132 @@
   width : 70%;
   margin-right: auto; 
   margin-left:auto;
-  margin-top: 55px;
   border-radius: 10px;
 }
 body {
   color: white;
 }
-h1 {
-  padding: 0;
-  margin-top: 100px;
-  font-size: 5.0em;
+.pageFour h1 {
+  font-size: 2.0em;
+  color: green;
+  font-family: Lobster;
+}
+.pageFour a1 {
+  font-size: 2.8em;
+  color: green;
+  font-family: Lobster;
+}
+p {
+  font-size: 1.7em;
+}
+.me {
+  height:280px;
+  display:block;
+  margin:auto;
+  border-radius:50%;
 }
 .btn-default {
-  background-color: black;
   border-color: black;
-  color: #337ab7;
+  color: green;
+  font-size: 1.7em;
 }
-a {
-  color:blue;
-}
+
 .pull-right {
   float: right;
   background-color:none;
 }
+
 
 </style>
 
 <head>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
 
 </head>
 
-<div class="container container-fluid">
+<body>
+
+<div id="p1" class="pageOne">
   <ul class="nav nav-pills">
     <li class = "pull-left">
-      <a href="#">Charlie</a>
+      <a href="#p1">Charlie</a>
     </li>
     <li class = "pull-right">
-      <a href="#">About</a>
+      <a href="#p2">About</a>
     </li>
     <li class = "pull-right">
-      <a href="#">Contact me</a>
+      <a href="#p3">Portfolio</a>
+    </li>
+    <li class = "pull-right">
+      <a href="#p4">Contact me</a>
     </li>
   </ul>
-  <div class="pageOne">
+
     <div class="block text-center">
-      <div> <a>.</a> </div>
-      <h1>Introduction</h1>
+      <h1>Charlie 木匠</h1>
       <h2>Always learning, keep an open mind.</h2>
     </div>
-    <div class="btnList">
-      <a class="btn btn-default" href="#">Linkedin</a>
+    <div class="btnList text-center">
+      <a class="btn btn-default" href="#"><i class="fa fa-linkedin"></i> Linkedin</a>
       <a class="btn btn-default" href="#">GitHub</a>
-      <a class="btn btn-default" href="#">Twitter</a>
+      <a class="btn btn-default" href="https://twitter.com/mujiang" target="blank"><i class="fa fa-twitter" id="twitterIcon"></i> Twitter</a>
       <a class="btn btn-default" href="#">Blogger</a>
       <a class="btn btn-default" href="#">Weibo</a>
     </div>
+</div>
+  
+<div id="p2" class="pageTwo">
+    <div class="row">
+      <div class="col-md-6">
+        <h1>Charlie</h1>
+        <p>Software Development Manager</p>
+      </div>
+      <div class="col-md-6">
+        <img class="me ximg-responsive" src="https://lh3.googleusercontent.com/i2TfpqbzvNZK6G2snMpyqvAZ42NMZtfcSf3DvySBuFOO4XeuLjXqZPqJJw7rPzhWUKoOIUb_NeYMcK_DOUPIVQDljaAcMo5zPtEUzpPRL9cZJWHFzJS6lBTUcdw3uAJn2YBuKS0Q-JfROyjzxyJQR9IebcbwPV_CIFL74BkzG9GsG-swCdfXq3mC6a26JxRcVsGNkOnJ27hsVU-zuNFB4tBjw2chVu2Uyu13e5UYhL21MMqeRqFmgxb4OkNRUvYMA2hRy-uLdeXy8Pf6g_JWnw1EALX4K71X9V7LcjVofRTbToJgErcrNG6xr-TPVO2-vtVHQbW2ZZBsWzUsq9gfqZSPnn20UvB9eiDwMES9Os7XknHoSIyxc4XEFmcrdMnYoeMxWEaFbtOAu1Qy5BKjFsofYWvLr0F6Tz87hs3lJj73gWYzvBJhpl0V_kIy79W7GRjdtYmlaSxVGbWcw_Z97uZhksQxnqUGgX1UnSYjazdKW55K_-Ia4xF0F_DTLl2zqT0GRUxUG-59YSnmSvs3LnGczD6SaLcnUpo9H51eK9Gjzv-mBiuNMyix94ywznfSx3gQtQvfxKsX2jDY0v6nJe5S11Mfwa9Tp6763ZK82RbcXYDN0irb=w720-h1280-no">
+      </div>
+    </div>
+</div>
+
+
+<div id="p3" class="pageThree text-center">
+  <div class="paddingTop">
+    <h1>Stretch portfolio</h1>
+    <h2>Charlie future project</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <p><hr>aa</p>
+        <img class="me img-responsive" src="https://goo.gl/o5rxjE">
+      </div>
+      <div class="col-md-6">
+        <hr>
+        <img class="me img-responsive" src="https://goo.gl/o5rxjE">
+      </div>
+      <div class="col-md-6">
+        <hr>
+        <img class="me img-responsive" src="https://goo.gl/o5rxjE">
+      </div>
+      <div class="col-md-6">
+        <p><hr>
+        </p>
+        <img class="me img-responsive" src="https://goo.gl/o5rxjE">
+      </div>
+    </div>
+    
+  </div>
+
+</div>
+
+<div id="p4" class="pageFour text-center">
+  <div class="footer">
+    <a href="#p1"><h1>Charlie a/h1 - </h1></a>
+    <a href="#p1"><h1>Charlie a/h1 - </h1></a>
+    <h1>
+      <a href="#p1">Charlie h1/a - </a>
+      <a href="#p1">Charlie h1/a - </a>
+    </h1>
+    
   </div>
 </div>
 
