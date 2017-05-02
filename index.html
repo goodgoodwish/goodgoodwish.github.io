@@ -1,11 +1,19 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-CN">
+
+<head>
+  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
+</head>
 
 <style>
 
 .nav-pills {
   font-family: Lobster;
   font-size: 2em;
+  float: right;
 }
 #twitterIcon {
   color:rgb(0,172,237);
@@ -14,6 +22,7 @@
   background:url("https://images.unsplash.com/photo-1488867605300-0380106bc701");
   background-size: cover;
   padding-bottom: 5%;
+  padding-top: 20%;
 }
 .pageTwo {
   background:url("https://goo.gl/olijun");
@@ -27,7 +36,6 @@
   
 }
 .pageFour {
-  background: url("No, https://goo.gl/o5rxjE");
   background-size: cover;
   padding-top : 5%;
   padding-bottom: 5%;
@@ -42,11 +50,11 @@
   border-style: solid;
 }
 .block {
-  background-color:black;
+  background-color:rgba(255, 0, 0, 0.4);
   color: yellow;
-  opacity: 0.5;
+  opacity: 0.7;
   padding: 10px;
-  width : 70%;
+  width : 80%;
   margin-right: auto; 
   margin-left:auto;
   border-radius: 10px;
@@ -77,9 +85,29 @@ p {
 }
 
 .footer {
-  /* float: right; */
-  background-color:black;
+  background-color:grey;
   color:white;
+}
+.banner-top {
+  background-color:purple;
+  width: 58%;
+  position: fixed;
+  z-index: 21;
+}
+.banner {
+  background-color:purple;
+}
+#message {
+  width: 100%;
+  height: 8em;
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 2em;
+}
+body .mailinput {
+  border: none;
+  border-bottom: 1px solid grey;
+  font-size: 1.5em;
 }
 body .btn-circle {
   border-radius: 50%;
@@ -89,21 +117,56 @@ body .btn-circle {
   padding: 12px 15px;
 }
 
+.ul-menu {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+  top: 0;
+  width: 100%;
+  overflow: hidden;
+  position: fixed;
+  z-index: 20;
+}
+.ul-menu li {
+  float: right;
+  border-right: 1px solid #bbb;
+}
+.ul-menu li a {
+  display: block;
+  padding: 18px;
+  background-color: #dddddd;
+}
+
+.ul-menu a:hover {
+  background-color: #555;
+  color: white;
+}
+.ul-menu li a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
 </style>
 
 <head>
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
 </head>
 
 <body>
-  
-<div id="p1" class="pageOne">
-  <ul class="nav nav-pills">
+
+<div>
+  <ul class="ul-menu">
+    <li><a href="#p2" class="active">About</a></li>
+    <li><a href="#p3">Portfolio</a></li>
+    <li><a href="#p4">Contact Me</a></li>
+  </ul>
+  <ul class="nav nav-pills banner-top">
     <li class = "pull-left">
-      <a href="#p1">Charlie</a>
+      <a href="#p1">Charlie</a> 
     </li>
     <li class = "pull-right">
       <a href="#p2">About</a>
@@ -115,7 +178,10 @@ body .btn-circle {
       <a href="#p4">Contact me</a>
     </li>
   </ul>
+</div>
 
+<div class="container container-fluid">
+<div id="p1" class="pageOne">
     <div class="block text-center">
       <h1>Charlie 木匠</h1>
       <h2>Always learning, keep an open mind.</h2>
@@ -178,47 +244,72 @@ body .btn-circle {
 
   <div class="row">
     <div class="col-md-6 text-left">
-      <h2>Name and ... </h2>
+      <h2>Send email to me</h2>
+      
       <form>
-        <input type="text" value="Your name">
-        <input type="text" value="Your email">
+        <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="username" class="form-control mailinput" placeholder="Enter your name">
+        </div>
+        <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control mailinput" id="email" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+        <label for="phone">Phone number:</label>
+        <input type="tel" class="form-control mailinput" id="phone" placeholder="Phone number">
+        </div>
+        <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" class="form-control mailinput" placeholder="Message"></textarea><br><hr>
+        </div>
+        <input type="submit" value="Send" class="btn btn-default">
       </form>
     </div>
     <div class="col-md-6 text-left">
       <p>Want to get in touch with me? Be it to request more info about myself or my experience, to ask for my resume, tips on how to solve your sudoku, random questions about the universe and the meaning of life, or even if only for some nice Fika here in stunning Toronto... just feel free to drop me a line anytime.</p>
-      <p>.</p>
+      <br>
       <p>I promise to reply A.S.A.P.</p>
-      <p><a href="mailto:goodgoodwish@gmail.com">GoodGoodWish@gmail.com</a></p>
+      <p><a href="mailto:goodgoodwish@gmail.com">GoodGoodWish@gmail.com</a></p><br><br>
+      <p>Note: No spam/soliciting pour moi, merci :) </p>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-6">
-      <h2>ABOUT THIS PAGE</h2>
-      <p>Made with <i class="fa fa-coffee"></i> and <i class="fa fa-music"></i> by Charlie</p>
-    </div>
-    <div class="col-md-6">
-      <h2>AROUND THE WEB</h2>
-      <h3>
-        <a href="#p1">Charlie - </a>
-        <a href="#p2">About me - </a>
-        <a href="#p3">Portfolio - </a>
-        <a href="mailto:goodgoodwish@gmail.com">GoodGoodWish@gmail.com - </a>
-      </h3>
+</div>
+</div>
 
-      <a class="btn btn-default btn-circle" href="https://www.linkedin.com/in/mujiang/">
+<div class="row footer text-center">
+  <div class="col-md-6">
+    <h2>ABOUT THIS PAGE</h2>
+    <p>Made with <i class="fa fa-coffee"></i> and <i class="fa fa-music"></i> by Charlie
+      <a href="mailto:goodgoodwish@gmail.com">GoodGoodWish@gmail.com - </a>
+    </p>
+  </div>
+  <div class="col-md-6">
+    <h2>AROUND THE WEB</h2>
+    <h3>
+      <a class="btn btn-default btn-circle" href="https://www.linkedin.com/in/mujiang/" target="blank">
         <i class="fa fa-linkedin fa-2x"></i>
+      </a>
+      <a class="btn btn-default btn-circle" href="https://github.com/goodgoodwish" target="blank">
+        <i class="fa fa-github fa-2x"></i>
       </a>
       <a class="btn btn-default btn-circle" href="https://twitter.com/mujiang/" target="blank">
         <i class="fa fa-twitter fa-2x"></i>
       </a>
+      <a href="https://twitter.com/mujiang/" target="blank">
+        <i class="fa fa-twitter">Twiter</i>
+      </a>
+    </h3>
 
-    </div>
-  </div>
-  <div class="footer">
-    <p>Copyleft 木匠 2015</p>
   </div>
 </div>
 
+<div class="banner text-center">
+  <p>Copyleft Charlie 木匠 2017 April</p>
+</div>
+
 </body>
+
+
 </html>
