@@ -5,7 +5,6 @@
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.6/css/bootstrap.min.css">
 </head>
 
 <style>
@@ -13,7 +12,7 @@
 .nav-pills {
   font-family: Lobster;
   font-size: 2em;
-  float: right;
+  float: center;
 }
 #twitterIcon {
   color:rgb(0,172,237);
@@ -123,7 +122,7 @@ body .btn-circle {
   padding: 0;
   background-color: #f1f1f1;
   top: 0;
-  width: 120%;
+  width: 100%;
   overflow: hidden;
   position: fixed;
   z-index: 20;
@@ -131,10 +130,11 @@ body .btn-circle {
 .ul-menu li {
   float: right;
   border-right: 1px solid #bbb;
+  width: 10%;
 }
 .ul-menu li a {
   display: block;
-  padding: 28px;
+  padding: 18px;
   background-color: #dddddd;
 }
 
@@ -149,23 +149,21 @@ body .btn-circle {
 
 </style>
 
-<head>
-  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-
-</head>
-
 <body>
 
 <div>
+ <div>
   <ul class="ul-menu">
-    <li><a href="#p2" class="active">About</a></li>
+    <li class = "pull-left"><a href="#p1" class="active">Charlie</a></li>
+    <li><a href="#p2">About</a></li>
     <li><a href="#p3">Portfolio</a></li>
     <li><a href="#p4">Contact Me</a></li>
   </ul>
+ </div>
+ <hr><br>
+ <div>
   <ul class="nav nav-pills banner-top">
-    <li class = "pull-left">
+    <li class = "pull-right">
       <a href="#p1">Charlie</a> 
     </li>
     <li class = "pull-right">
@@ -178,6 +176,7 @@ body .btn-circle {
       <a href="#p4">Contact me</a>
     </li>
   </ul>
+ </div>
 </div>
 
 <div class="container container-fluid">
